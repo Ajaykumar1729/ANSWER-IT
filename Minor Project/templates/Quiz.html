@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel="stylesheet" href="static\Qstyle.css">
+    </head>
+    <body>
+        <section>
+            <nav class="header">
+            
+                <label><a class="logo" href="/Quiz">ANSWER-IT</a></label>
+                <ul>
+                    <li><a class="Opt" href="/Quiz">Home</a></li>
+                    <li><a class="Opt" href="/Profile">Profile</a></li>
+                    <li class="dropdown">
+                        <div ><a class="Opt">Leader Board</a></div>
+                            <div class="dropdown-content">
+                                <a href="/DSLB">DS</a>
+                                <a href="/DBMSLB">DBMS</a>
+                                <a href="/PyLB">Python</a>
+                                <a href="/JALB">Java</a>
+                                <a href="/ApLB">Aptitude</a>
+                            </div>
+                    </li>   
+                    <li><a class="Opt" href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section><h2>Welcome {{user}}</h2></section>
+        <section><h2>Select a Subject to Attempt the Quiz</h2></section>
+
+        <section class="portfolio">
+            <figure class="port-item">
+                <img src="static\images\Ds.png" alt="Quiz Subject">
+                <figcaption class="port-description">
+                    <p>Data Structure</p>
+                    <a href="/DS"  class="button button-accent button-small">Open Quiz</a>
+                </figcaption>
+            </figure>
+                
+                <!-- Quiz Subject #2 -->
+                <figure class="port-item">
+                <img src="static\images\Dbms2.png" alt="Quiz Subject">
+                <figcaption class="port-description">
+                <p>Database Management System</p>
+                <a href="/DBMS" class="button button-accent button-small">Open Quiz</a>
+                </figcaption>
+                </figure>
+                
+                <!-- Quiz Subject #3 -->
+                <figure class="port-item">
+                <img src="static\images\Python1.png" alt="Quiz Subject">
+                <figcaption class="port-description">
+                <p>Python</p>
+                <a href="/Python" class="button button-accent button-small">Open Quiz</a>
+                </figcaption>
+                </figure>
+                
+                <!-- Quiz Subject #4 -->
+                <figure class="port-item">
+                <img src="static\images\Java.png" alt="Quiz Subject">
+                <figcaption class="port-description">
+                <p>Java</p>
+                <a href="/Java" class="button button-accent button-small">Open Quiz</a>
+                </figcaption>
+                </figure>
+                
+                <!-- Quiz Subject #5 -->
+                <figure class="port-item">
+                <img src="static\images\Aptitude.png" alt="Quiz Subject">
+                <figcaption class="port-description">
+                <p>Aptitude</p>
+                <a href="/Aptitude" class="button button-accent button-small">Open Quiz</a>
+                </figcaption>
+                </figure>
+        </section>
+    </body>
+</html>

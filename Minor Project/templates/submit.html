@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>submit</title>
+        <link rel="stylesheet" href="static\leadboard.css">
+    </head>
+    <body>
+        <nav class="header">
+            
+            <label><a class="logo" href="/Quiz">ANSWER-IT</a></label>
+            <ul>
+                <li><a class="Opt" href="/Quiz">Home</a></li>
+                <li><a class="Opt" href="/Profile">Profile</a></li>
+                <li class="dropdown">
+                    <div ><a class="Opt">Leader Board</a></div>
+                        <div class="dropdown-content">
+                            <a href="/DSLB">DS</a>
+                            <a href="/DBMSLB">DBMS</a>
+                            <a href="/PyLB">Python</a>
+                            <a href="/JALB">Java</a>
+                            <a href="/ApLB">Aptitude</a>
+                        </div>
+                </li>   
+                <li><a class="Opt" href="/logout">Logout</a></li>
+            </ul>
+        <!-- </div> -->
+        </nav>
+        <div class="centers">
+            <h1>Hello! {{username}}</h1><br>
+            <h1>You have already Attemped the Quiz</h1><br>
+            <h2>Here Are your Responses:</h2>
+            <h2>Results :- {{msg[0]}}/10 and</h2>
+            <h2>Time Taken is {{msg[1]}} seconds</h2>
+        </div>
+    </body>
+</html>

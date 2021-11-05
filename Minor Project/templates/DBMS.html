@@ -1,0 +1,140 @@
+<html>
+  <head>
+   <title>Database Management System</title>
+   <!-- <link rel="stylesheet" href="static\com.css"> -->
+   <link rel="stylesheet" href="static\com.css">
+   
+   </head>
+  <body oncontextmenu="return false;"  onmousedown="return false" onselectstart="return false">
+    <nav class="header12">
+        <label class="logo">ANSWER-IT</label>
+        <ul>
+            <li><a class="Opt" href="/Quiz">Home</a></li>
+            <li><a class="Opt" href="/Profile">Profile</a></li>
+            <li class="dropdown">
+                <div ><a class="Opt">Leader Board</a></div>
+                    <div  class="dropdown-content">
+                        <a href="/DSLB">DS</a>
+                        <a href="/DBMSLB">DBMS</a>
+                        <a href="/PyLB">Python</a>
+                        <a href="/JALB">Java</a>
+                        <a href="/ApLB">Aptitude</a>
+                    </div>
+            </li>   
+            <li><a class="Opt" href="/logout">Logout</a></li>
+        </ul>        
+    </nav>
+    <div class="center" id="invis">
+        <!-- <form action="/Instructions"> -->
+            <h1>Basic Instructions</h1>
+            <!-- <div class="msg">{{ msg }}</div> -->
+            <div class="text_field">
+                <br>
+                <h3> 1.Total 10 Questions </h3><br>
+                <h3> 2.Each Question Carries 1 mark </h3><br>
+                <h3> 3.No Negative Marks </h3><br>
+                <h3> 4.No Time limit but time taken will be recorded </h3><br>
+                <h3> 5.Total number of Correct Answers will be displayed after submission</h3><br>
+                <h3> 6.Once the Quiz is Submitted,It can't be Attempted Again </h3><br>
+                <button type="submit" class="ins_box" onclick="start()" >Continue</button>
+                
+                
+            </div>
+            <br>
+        <!-- </form> -->
+    </div>
+    
+    <div id="loader" style="display:none;"></div>
+   
+    <div class="contain" id="container">
+        <header class="header">
+            <h1>Database Management System</h1>
+            <h1 id="pop" class="timer">0 hr:0 min :0 sec</h1>
+            <p>Test Your Knowledge</p><br>            
+        </header>
+        <div class="res1">
+            <br>
+            <h2 id="left">Results</h2>
+            <h2 id="right" name="r1">0</h2>
+            <br><br>
+        </div>
+        <section>
+            <br>
+            <div id="results">
+            <form name="quizform" onsubmit="return myFunction2()">
+                
+                <h3> The view of total database content is  </h3>
+                <!-- <input type="radio" name="q1" value="a" id="q1a"><label id="q1a">FIFO</label><br> -->
+                <label id="q1a"><input type="radio" name="q1" value="a">Physical view.</label><br>
+                <label id="q1b"><input type="radio" name="q1" value="b">Internal view.</label><br>
+                <label id="q1c"><input type="radio" name="q1" value="c">External view.</label><br>
+                <label id="q1d"><input type="radio" name="q1" value="d">Conceptual view.</label><br><br>
+
+                <h3> DML is provided for? </h3>
+                <label id="q2a"><input type="radio" name="q2" value="a">Description of logical structure of database.</label><br>
+                <label id="q2b"><input type="radio" name="q2" value="b">Addition of new structures in the database system.</label> <br>
+                <label id="q2c"><input type="radio" name="q2" value="c">Manipulation & processing of database.</label><br>
+                <label id="q2d"><input type="radio" name="q2" value="d">Definition of physical structure of database system.</label><br><br>
+
+                <h3> ‘AS’ clause is used in SQL for </h3>
+                <label id="q3a"><input type="radio" name="q3" value="a">Selection operation.</label><br>
+                <label id="q3b"><input type="radio" name="q3" value="b">Rename operation.</label><br>
+                <label id="q3c"><input type="radio" name="q3" value="c">Join operation.</label><br>
+                <label id="q3d"><input type="radio" name="q3" value="d">Projection operation.</label><br><br>
+
+                <h3> In the relational modes, cardinality is termed as: </h3>
+                <label id="q4a"><input type="radio" name="q4" value="a">Number of attributes.</label><br>
+                <label id="q4b"><input type="radio" name="q4" value="b">Number of tables.</label><br>
+                <label id="q4c"><input type="radio" name="q4" value="c">Number of tuples.</label><br>
+                <label id="q4d"><input type="radio" name="q4" value="d">Number of constraints.</label><br><br>
+
+                <h3> A logical schema </h3>
+                <label id="q5a"><input type="radio" name="q5" value="a">is the entire database.</label><br>
+                <label id="q5b"><input type="radio" name="q5" value="b">is a standard way of organizing information into accessible parts.</label> <br>
+                <label id="q5c"><input type="radio" name="q5" value="c">describes how data is actually stored on disk.</label><br>
+                <label id="q5d"><input type="radio" name="q5" value="d">both (A) and (C) </label><br><br>
+
+                <h3>In a Hierarchical model records are organized as </h3>
+                <label id="q6a"><input type="radio" name="q6" value="a">Graphs</label><br>
+                <label id="q6b"><input type="radio" name="q6" value="b">Lists</label><br>
+                <label id="q6c"><input type="radio" name="q6" value="c">Links</label><br>
+                <label id="q6d"><input type="radio" name="q6" value="d">Tree</label><br><br>
+
+                <h3>  Related fields in a database are grouped to form a </h3>
+                <label id="q7a"><input type="radio" name="q7" value="a">Data file</label><br>
+                <label id="q7b"><input type="radio" name="q7" value="b">Menu</label><br>
+                <label id="q7c"><input type="radio" name="q7" value="c">Data Record</label><br>
+                <label id="q7d"><input type="radio" name="q7" value="d">Bank</label><br><br>
+
+                <h3>A relational database developer refers to a record as</h3>
+                <label id="q8a"><input type="radio" name="q8" value="a">a relation</label><br>
+                <label id="q8b"><input type="radio" name="q8" value="b">an attribute</label><br>
+                <label id="q8c"><input type="radio" name="q8" value="c">a tuple</label><br>
+                <label id="q8d"><input type="radio" name="q8" value="d">None of the above</label><br><br>
+
+                <h3>  The method in which records are physically stored in a specified order according to a key
+                    field in each record is </h3>
+                <label id="q9a"><input type="radio" name="q9" value="a">sequential</label><br>
+                <label id="q9b"><input type="radio" name="q9" value="b">hash</label><br>
+                <label id="q9c"><input type="radio" name="q9" value="c">direct</label><br>
+                <label id="q9d"><input type="radio" name="q9" value="d">All the Above</label><br><br>
+
+                <h3>In an E-R diagram attributes are represented by </h3>
+                <label id="q10a"><input type="radio" name="q10" value="a">Rectangle</label><br>
+                <label id="q10b"><input type="radio" name="q10" value="b">Square</label><br>
+                <label id="q10c"><input type="radio" name="q10" value="c">Ellipse</label><br>
+                <label id="q10d"><input type="radio" name="q10" value="d">Parabola</label><br>
+                <br>
+                
+                <!-- <button id="subt" type="button" onclick="return myFunction()">Submit</button> -->
+                <button id="subt">Submit</button>
+                
+               
+            </form>
+            </div>
+        </section>
+    </div>
+    <script src="static\time.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  </body>
+</html> 

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Leader Board</title>
+        <link rel="stylesheet" href="static\leadboard.css">
+    </head>
+    <body>
+        <section>
+            <nav class="header">
+                <label><a class="logo" href="/Quiz">ANSWER-IT</a></label>
+                <ul>
+                    <li><a class="Opt" href="/Quiz">Home</a></li>
+                    <li><a class="Opt" href="/Profile">Profile</a></li>
+                    <li class="dropdown">
+                        <div ><a class="Opt">Leader Board</a></div>
+                            <div  class="dropdown-content">
+                                <a href="/DSLB">DS</a>
+                                <a href="/DBMSLB">DBMS</a>
+                                <a href="/PyLB">Python</a>
+                                <a href="/JALB">Java</a>
+                                <a href="/ApLB">Aptitude</a>
+                            </div>
+                    </li>   
+                    <li><a class="Opt" href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section >
+            <div class=center>
+                <form name="LB" >
+                    <header>Leader Board</header>
+                </form><br>
+                <table>
+                    <thead>
+                       <tr>
+                           <th>Rank</th>
+                           <th>Username</th>
+                           <th>Name</th>
+                           <th>Marks</th>
+                           <th>Time(Sec)</th>                   
+                       </tr>
+                    </thead>    
+                    <tbody >
+                        {% for row in users %}    
+                            <tr>
+                               <td>{{row[0]}}</td>
+                               <td>{{row[1]}}</td>
+                               <td>{{row[2]}}</td>
+                               <td>{{row[3]}}</td>
+                               <td>{{row[4]}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                
+            </div>
+        </section>
+        
+    </body>
+</html>

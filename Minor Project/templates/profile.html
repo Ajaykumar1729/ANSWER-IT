@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="static\leadboard.css">
+    </head>
+    <body>
+        <nav class="header">
+            
+            <label><a class="logo" href="/Quiz">ANSWER-IT</a></label>
+            <ul>
+                <li><a class="Opt" href="/Quiz">Home</a></li>
+                <li><a class="Opt" href="/Profile">Profile</a></li>
+                <li class="dropdown">
+                    <div ><a class="Opt">Leader Board</a></div>
+                        <div class="dropdown-content">
+                            <a href="/DSLB">DS</a>
+                            <a href="/DBMSLB">DBMS</a>
+                            <a href="/PyLB">Python</a>
+                            <a href="/JALB">Java</a>
+                            <a href="/ApLB">Aptitude</a>
+                        </div>
+                </li>   
+                <li><a class="Opt" href="/logout">Logout</a></li>
+            </ul>
+        <!-- </div> -->
+        </nav>
+        <div class="profile">
+            <div>
+                <h2 class="dashed">Personal Details :</h2>
+                <h3>Name &nbsp &nbsp &nbsp &nbsp: {{users[1]}}</h3>
+                <h3>Username : {{users[0]}}</h3>                
+                <h3>Email &nbsp &nbsp &nbsp &nbsp: {{users[2]}}</h3>              
+                <h3><a style="color: black;" href="/ChangePassword">Change Password</a></h3>
+            </div>
+            <div>
+                <h2 class="dashed">Subject Details :</h2>
+                <table class="table">
+                    <thead>
+                       <tr>
+                           <th>Subjects</th>
+                           <th>Marks</th>
+                           <th>Time Taken(Sec)</th>                   
+                       </tr>
+                    </thead>    
+                    <tbody>
+                            
+                            <tr>
+                               <td>Data Structures</td>
+                               <td>{{users[4]}}</td>
+                               <td>{{users[5]}}</td>
+                            </tr>
+                            <tr>
+                                <td>Database Management System</td>
+                                <td>{{users[6]}}</td>
+                                <td>{{users[7]}}</td>
+                             </tr>
+                             <tr>
+                                <td>Python</td>
+                                <td>{{users[8]}}</td>
+                                <td>{{users[9]}}</td>
+                             </tr>
+                             <tr>
+                                <td>Java</td>
+                                <td>{{users[10]}}</td>
+                                <td>{{users[11]}}</td>
+                             </tr>
+                             <tr>
+                                <td>Aptitude</td>
+                                <td>{{users[12]}}</td>
+                                <td>{{users[13]}}</td>
+                             </tr>
+                         
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Sign Up</title>         
+        <link rel="stylesheet" href="static\style.css">        
+    </head>
+    <body>
+        <nav class="header">
+            <label class="logo">ANSWER-IT</label>
+        </nav><br>
+        <div class="center">
+            <form action="/register" method="POST">
+                <h1>Register</h1>
+                <div class="msg">{{ msg }}</div>
+                <div class="text_field">
+                    <input  name="username" placeholder="Username" type="text" required/><br><br>
+                    <input  name="name" placeholder="Name" type="text" required/><br><br>
+                    <input  name="email" placeholder="Email" type="email" required/><br><br>
+                    <input  name="password" placeholder="Password" type="text" required/><br><br>
+                    <input  name="password2" placeholder="Confirm Password" type="password" required/><br><br>
+                    <button type="submit">Sign Up</button><br><br>
+                    <div class="signup">Have an account? <a href="/">Sign In</a></div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

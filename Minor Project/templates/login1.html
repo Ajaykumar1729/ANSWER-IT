@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Login/Sign Up Page</title>
+        <link rel="stylesheet" href="static\style.css">
+    </head>
+    <body>
+        <nav class="header">
+            <label class="logo">ANSWER-IT</label>
+        </nav>
+        <div class="center">
+            <form action="/login" method="post">
+                <h1>Login</h1>
+                <div class="msg">{{ msg }}</div>
+                <div class="text_field">
+                    <input name="username" placeholder="Username/Email" type="text" required/><br><br>
+                    <input name="password" placeholder="Password" type="password" required/><br><br>
+                    <button type="submit">Login</button><br><br>
+                    <div class="signup">Don't Have an account?<a href="/register">Create Account </a></div>
+                </div>
+            </form>
+        </div>    
+    </body>
+</html>
