@@ -1,7 +1,3 @@
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-}
-        
 const popup=document.querySelector(".center");
 const scroll=document.querySelector("body");
 
